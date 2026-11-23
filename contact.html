@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact us | New Path Digital</title>
+<meta name="description" content="Book a free 20-minute call with New Path Digital. Email hello@newpathdigital.ie.">
+<link rel="icon" href="/icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<style>
+.contact{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(30px,5vw,70px);align-items:start;padding-bottom:clamp(56px,8vw,100px)}
+.mailbox{border:1px solid var(--gold);border-radius:18px;padding:clamp(26px,4vw,44px)}
+.email{display:block;font:400 clamp(22px,2.6vw,34px)/1.1 "Anton";letter-spacing:.01em;margin:6px 0 26px;overflow-wrap:anywhere}
+.email:hover{color:var(--gold)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.copied{font:500 12px/1 "DM Mono",monospace;letter-spacing:.1em;color:var(--gold);margin-top:14px;min-height:12px}
+.mailbox ul{margin-top:28px}
+.steps{list-style:none;display:grid;gap:22px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:42px 1fr;gap:14px;counter-increment:s}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:42px;height:42px;border-radius:50%;border:1px solid var(--gold);font:500 15px/1 "DM Mono",monospace;color:var(--gold)}
+.steps b{display:block;font-weight:600;margin-bottom:2px}
+.steps span{color:var(--soft);font-size:15px}
+@media (max-width:760px){.contact{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a href="/" aria-label="New Path Digital home">
+    <svg class="mark" viewBox="0 0 100 100" fill="none" stroke="#c9a24a" stroke-width="7" stroke-linecap="round"><circle cx="50" cy="34" r="22"/><circle cx="35" cy="60" r="22"/><circle cx="65" cy="60" r="22"/></svg>
+  </a>
+  <nav class="nav">
+    <a href="/#work">Our work</a>
+    <a href="/services">Service &amp; pricing</a>
+    <a href="/about">About us</a>
+    <a href="/contact" aria-current="page">Contact us</a>
+  </nav>
+  <span class="spacer"></span>
+</header>
+
+<main>
+  <div class="wrap page-head">
+    <div class="kicker">Twenty minutes. No jargon.</div>
+    <h1>Contact us</h1>
+    <p>Book a free call. Tell us a little about your business and we'll get back to you within one working day.</p>
+  </div>
+
+  <section class="wrap contact">
+    <div class="mailbox">
+      <div class="kicker">Email us</div>
+      <a class="email" href="mailto:hello@newpathdigital.ie?subject=Free%20call">hello@newpathdigital.ie</a>
+      <div class="btns">
+        <a class="cta" href="mailto:hello@newpathdigital.ie?subject=Free%20call">Book a free call</a>
+        <button class="cta ghost" id="copy" type="button">Copy email</button>
+      </div>
+      <div class="copied" id="copied" aria-live="polite"></div>
+      <ul class="ticks">
+        <li>Your name and business name</li>
+        <li>What kind of business it is</li>
+        <li>Your current website, if you have one</li>
+        <li>The best time to ring you</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="big">What happens next</h2>
+      <ol class="steps">
+        <li><div><b>You send us a short email</b><span>A few lines is plenty. Use the list on this page as a guide.</span></div></li>
+        <li><div><b>We reply within one working day</b><span>We'll suggest a time for a 20-minute call that suits you.</span></div></li>
+        <li><div><b>We have a quick chat</b><span>We look at what you have now and tell you plainly what we'd do. No pressure to sign up.</span></div></li>
+      </ol>
+      <div class="prose" style="margin-top:34px">
+        <div class="kicker">Where we work</div>
+        <p>All of Ireland. We work by phone, email and video call.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <span>New Path Digital. Websites for small Irish businesses.</span>
+  <nav><a href="/#work">Our work</a><a href="/services">Service &amp; pricing</a><a href="/about">About us</a><a href="/contact">Contact us</a></nav>
+</footer>
+
+<script>
+document.getElementById("copy").addEventListener("click", async () => {
+  const out = document.getElementById("copied");
+  try { await navigator.clipboard.writeText("hello@newpathdigital.ie"); out.textContent = "Email copied"; }
+  catch { out.textContent = "Select the email above to copy it"; }
+});
+</script>
+</body>
+</html>
