@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Corner Cup · Kilkenny</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@700;800&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3ece0;--paper:#fbf6ee;--ink:#3b2416;--brown:#6b3f24;--rust:#a4552c;--dim:#8a7462}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:400 14px/1.7 "DM Mono",ui-monospace,monospace}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+nav{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+nav .links{display:flex;gap:26px}
+.logo{white-space:nowrap;font:800 26px/1 "Syne",sans-serif;letter-spacing:.14em;color:var(--brown)}
+.logo span{display:inline-block;transform:rotate(-8deg);color:var(--rust)}
+.cart{border:1px solid var(--ink);padding:6px 12px;border-radius:999px}
+.hero{position:relative;height:min(78vh,640px);min-height:440px;overflow:hidden}
+.hero img{object-position:30% 60%;filter:saturate(.9) contrast(1.02)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(40,22,10,.72),rgba(40,22,10,.05) 65%)}
+.hero .txt{position:absolute;z-index:1;left:clamp(24px,6vw,80px);bottom:clamp(40px,10vh,90px);color:#fbf1e4;max-width:440px}
+.hero h1{font:500 clamp(18px,2.4vw,26px)/1.45 "DM Mono",monospace;margin-bottom:22px}
+.btn{display:inline-block;background:var(--rust);color:#fff;padding:11px 20px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;border-radius:2px}
+.btn.ghost{background:none;border:1px solid currentColor}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,6vw,90px);align-items:center;padding:clamp(60px,9vw,120px) 0}
+.split .ph{aspect-ratio:4/3.3;border-radius:2px;overflow:hidden}
+.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-bottom:10px}
+h2{font:700 clamp(22px,2.6vw,30px)/1.2 "Syne",sans-serif;letter-spacing:.02em;margin-bottom:16px;color:var(--brown)}
+p{color:#5b4334;max-width:46ch}
+p+.btn{margin-top:24px}
+.note{font:500 26px/1.1 "Caveat",cursive;color:var(--rust);transform:rotate(-6deg);display:inline-block;margin-bottom:18px}
+.roast{background:var(--paper);padding:clamp(60px,9vw,110px) 0}
+.roast .split{padding:0}
+.bag{position:relative;aspect-ratio:3/4;max-width:300px;margin:0 auto;background:linear-gradient(160deg,#6d4b33,#3d2617);border-radius:10px 10px 6px 6px;box-shadow:0 30px 50px -20px rgba(60,30,10,.5)}
+.bag::before{content:"";position:absolute;left:0;right:0;top:0;height:28px;background:repeating-linear-gradient(90deg,#4c3020 0 6px,#5a3a27 6px 12px);border-radius:10px 10px 0 0}
+.bag .label{position:absolute;left:50%;top:50%;transform:translate(-50%,-40%);width:58%;aspect-ratio:1;background:#fbf6ee;border-radius:50%;display:grid;place-content:center;text-align:center;color:var(--brown)}
+.bag .label b{font:800 17px/1 "Syne";letter-spacing:.12em}
+.bag .label small{font-size:9px;letter-spacing:.14em;margin-top:6px}
+.menu{padding:clamp(60px,9vw,110px) 0}
+.menu h2{text-align:center;margin-bottom:36px}
+.menu ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 60px;max-width:820px;margin:0 auto}
+.menu li{display:flex;gap:10px;padding:12px 0;border-bottom:1px dashed #cdbba6}
+.menu li span:first-child{flex:1}
+.menu li em{display:block;font-style:normal;font-size:12px;color:var(--dim)}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.strip div{aspect-ratio:1;overflow:hidden}
+.visit{background:var(--brown);color:#f3e6d6;padding:clamp(60px,8vw,100px) 0;text-align:center}
+.visit h2{color:#fff}
+.visit p{color:#e3cfb9;margin:0 auto 6px}
+.visit .btn{margin-top:22px;background:#f3ece0;color:var(--brown)}
+footer{padding:26px 28px;display:flex;justify-content:space-between;font-size:11px;color:var(--dim);letter-spacing:.06em}
+@media (max-width:720px){
+  nav .links{display:none}
+  nav{justify-content:center}
+  .logo{font-size:22px}
+  .split{grid-template-columns:1fr}
+  .menu ul{grid-template-columns:1fr}
+  .hero{height:560px}
+  .hero::after{background:linear-gradient(0deg,rgba(40,22,10,.8),rgba(40,22,10,.1) 70%)}
+  footer{flex-direction:column;gap:6px;text-align:center}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="links"><a href="#menu">Menu</a><a href="#story">Our story</a><a href="#roast">Beans</a></div>
+  <a class="logo" href="#">CORN<span>E</span>R CUP</a>
+  <div class="links"><a href="#visit">Visit</a><a class="cart" href="#roast">Shop (0)</a></div>
+</nav>
+
+<header class="hero">
+  <img src="../street/coffee.jpg" alt="Barista pouring milk beside a tray of fresh scones">
+  <div class="txt">
+    <h1>Coffee, scones and the simple goodness of sitting at the table.</h1>
+    <a class="btn" href="#menu">See the menu</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="split" id="story">
+    <div class="ph"><img src="../street/bakery.jpg" alt="Fresh bread on the counter" style="object-position:50% 40%"></div>
+    <div>
+      <span class="note">since 2014, on John St.</span>
+      <div class="eyebrow">A place to slow down</div>
+      <h2>The table is the whole point.</h2>
+      <p>Twelve seats, one big window and scones out of the oven at seven. Bring a book or bring your mam. Nobody here will rush you.</p>
+      <a class="btn ghost" href="#visit">Find us</a>
+    </div>
+  </section>
+</main>
+
+<section class="roast" id="roast">
+  <div class="wrap split">
+    <div>
+      <div class="eyebrow">Roasted in house</div>
+      <h2>Our own beans, every Friday.</h2>
+      <p>A chocolatey house blend roasted in small batches out the back. Take a bag home, ground for whatever you brew with.</p>
+      <a class="btn" href="#">Buy a bag · €12</a>
+    </div>
+    <div class="bag"><div class="label"><b>CORNER<br>CUP</b><small>HOUSE BLEND · 250G</small></div></div>
+  </div>
+</section>
+
+<section class="menu wrap" id="menu">
+  <div class="eyebrow" style="text-align:center">Served all day</div>
+  <h2>The menu</h2>
+  <ul>
+    <li><span>Flat white<em>Our house blend</em></span><span>€3.80</span></li>
+    <li><span>Fruit scone<em>Butter and homemade jam</em></span><span>€3.50</span></li>
+    <li><span>Filter coffee<em>Rotating guest roast</em></span><span>€3.20</span></li>
+    <li><span>Toasted special<em>Ham, cheese, onion, tomato</em></span><span>€7.50</span></li>
+    <li><span>Hot chocolate<em>With or without the cream</em></span><span>€4.00</span></li>
+    <li><span>Soup of the day<em>With brown bread</em></span><span>€6.90</span></li>
+  </ul>
+</section>
+
+<div class="strip">
+  <div><img src="../street/coffee.jpg" alt="" style="object-position:75% 70%"></div>
+  <div><img src="../street/bakery.jpg" alt="" style="object-position:20% 60%"></div>
+  <div><img src="../street/coffee.jpg" alt="" style="object-position:35% 85%"></div>
+</div>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="eyebrow" style="color:#d8bfa5">Come in</div>
+    <h2>14 John Street, Kilkenny</h2>
+    <p>Monday to Saturday, 7am to 5pm</p>
+    <p>Sunday, 9am to 2pm</p>
+    <a class="btn" href="#">Get directions</a>
+  </div>
+</section>
+
+<footer><span>© The Corner Cup</span><span>Instagram · Facebook · 056 123 4567</span></footer>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Greenacre Gardens · Galway</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--deep:#0f2e1b;--green:#174a2b;--lime:#c5ec6a;--cream:#f7f5ee;--ink:#16211a;--dim:#5f6b62}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--cream);color:var(--ink);font:400 15px/1.65 "Outfit",system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+.top{background:var(--deep);color:#e9f1e6}
+nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0;font-size:13px}
+nav .links{display:flex;gap:28px;opacity:.85}
+.logo{display:flex;align-items:center;gap:9px;font-weight:700;font-size:18px;letter-spacing:.01em}
+.logo i{width:26px;height:26px;border-radius:50% 0 50% 50%;background:var(--lime);transform:rotate(-45deg)}
+.pill{background:var(--lime);color:var(--deep);padding:9px 18px;border-radius:999px;font-weight:600;font-size:13px}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:clamp(40px,7vw,90px) 0 clamp(50px,8vw,100px)}
+.hero h1{font:600 clamp(34px,5vw,60px)/1.05 "Outfit";letter-spacing:-.02em;margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--lime)}
+.hero p{color:#b9c9bd;max-width:40ch;margin-bottom:28px}
+.hero .ph{aspect-ratio:1/1;border-radius:24px;overflow:hidden}
+.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:-60px;position:relative}
+.thumbs div{aspect-ratio:4/3;border-radius:16px;overflow:hidden;border:4px solid var(--cream)}
+.welcome{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,80px);padding:clamp(60px,9vw,110px) 0 40px}
+.welcome h2{font:600 clamp(26px,3.4vw,38px)/1.15 "Outfit";letter-spacing:-.01em}
+.welcome p{color:var(--dim)}
+.band{height:clamp(240px,36vw,420px);border-radius:24px;overflow:hidden}
+.band img{object-position:50% 70%}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);text-align:center;padding:44px 0 clamp(60px,9vw,100px)}
+.stats b{display:block;font:600 clamp(28px,4vw,42px)/1 "Outfit";color:var(--green)}
+.stats span{font-size:12px;color:var(--dim);letter-spacing:.04em}
+.process{background:var(--deep);color:#e6efe3;padding:clamp(60px,9vw,110px) 0}
+.process .head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:44px}
+.process h2{font:600 clamp(26px,3.4vw,38px)/1.15 "Outfit";max-width:16ch}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{border:1px solid rgba(197,236,106,.25);border-radius:18px;padding:22px}
+.step svg{width:34px;height:34px;stroke:var(--lime);fill:none;stroke-width:1.6;margin-bottom:16px}
+.step h3{font-weight:600;font-size:16px;margin-bottom:6px}
+.step p{font-size:13px;color:#a9bbad}
+.cta{padding:clamp(60px,9vw,110px) 0;text-align:center}
+.cta h2{font:600 clamp(28px,4vw,44px)/1.1 "Outfit";margin-bottom:14px}
+.cta p{color:var(--dim);margin-bottom:26px}
+.cta .pill{background:var(--green);color:#fff;padding:13px 26px;font-size:14px}
+footer{border-top:1px solid #dcdcd2;padding:24px 28px;display:flex;justify-content:space-between;font-size:12px;color:var(--dim)}
+@media (max-width:720px){
+  nav .links{display:none}
+  .hero,.welcome{grid-template-columns:1fr}
+  .thumbs{margin-top:-40px}
+  .stats{grid-template-columns:1fr 1fr;row-gap:28px}
+  .steps{grid-template-columns:1fr 1fr}
+  .process .head{flex-direction:column;align-items:start}
+  footer{flex-direction:column;gap:6px;text-align:center}
+}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="#"><i></i>Greenacre</a>
+      <div class="links"><a href="#services">Services</a><a href="#work">Our work</a><a href="#about">About</a></div>
+      <a class="pill" href="#quote">Free quote</a>
+    </nav>
+    <section class="hero">
+      <div>
+        <h1>We take care of your <em>garden</em> &amp; trees.</h1>
+        <p>Lawns, hedges, patios and planting across Galway and Mayo. Turn up on time, leave it tidy.</p>
+        <a class="pill" href="#quote">Get a free quote</a>
+      </div>
+      <div class="ph"><img src="../street/garden.jpg" alt="Garden patio with two wooden chairs at dusk"></div>
+    </section>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="thumbs" id="work">
+    <div><img src="../street/garden.jpg" alt="" style="object-position:20% 40%"></div>
+    <div><img src="../street/garden.jpg" alt="" style="object-position:90% 70%"></div>
+    <div><img src="../street/garden.jpg" alt="" style="object-position:55% 95%"></div>
+  </div>
+
+  <section class="welcome" id="about">
+    <h2>Welcome to Greenacre. We grow more than just plants.</h2>
+    <div>
+      <p>We're a family team of four, working gardens big and small since 2008. Most of our work comes from neighbours telling neighbours.</p>
+      <p style="margin-top:12px">One visit or every fortnight, we'll fit around you.</p>
+    </div>
+  </section>
+
+  <div class="band"><img src="../street/garden.jpg" alt="Wet stone patio after rain"></div>
+
+  <div class="stats">
+    <div><b>17</b><span>Years working</span></div>
+    <div><b>900+</b><span>Gardens looked after</span></div>
+    <div><b>4.9★</b><span>Google rating</span></div>
+    <div><b>2</b><span>Counties covered</span></div>
+  </div>
+</main>
+
+<section class="process" id="services">
+  <div class="wrap">
+    <div class="head">
+      <h2>Careful and sustainable, start to finish.</h2>
+      <a class="pill" href="#quote">Book a visit</a>
+    </div>
+    <div class="steps">
+      <div class="step"><svg viewBox="0 0 24 24"><path d="M12 21V9M12 9c0-4 3-6 7-6 0 4-3 6-7 6zM12 13c0-3-2-5-6-5 0 3 2 5 6 5z"/></svg><h3>Lawn care</h3><p>Mowing, feeding and edges kept sharp.</p></div>
+      <div class="step"><svg viewBox="0 0 24 24"><path d="M4 20h16M7 20V10l5-6 5 6v10"/></svg><h3>Hedges &amp; trees</h3><p>Trimming, shaping and safe removals.</p></div>
+      <div class="step"><svg viewBox="0 0 24 24"><rect x="3" y="12" width="8" height="8"/><rect x="13" y="12" width="8" height="8"/><rect x="8" y="4" width="8" height="8"/></svg><h3>Patios &amp; paths</h3><p>Laid, power-washed and sealed.</p></div>
+      <div class="step"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="4"/><path d="M12 13v8M8 21h8"/></svg><h3>Planting</h3><p>Beds and borders that suit the west.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta wrap" id="quote">
+  <h2>Let's sort your garden.</h2>
+  <p>Send a few photos and we'll come back with a price within a day.</p>
+  <a class="pill" href="#">Get a free quote</a>
+</section>
+
+<footer><span>© Greenacre Gardens, Galway</span><span>091 123 456 · hello@greenacre.example</span></footer>
+</body>
+</html>
