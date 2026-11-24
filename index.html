@@ -32,7 +32,9 @@ section[id]{scroll-margin-top:90px}
 
 /* ---------- hero ---------- */
 .hero{text-align:center;padding:clamp(40px,6vw,70px) 20px clamp(50px,7vw,80px)}
-.hero h1{font:400 clamp(40px,6.4vw,78px)/.95 "Anton",sans-serif;letter-spacing:.01em;text-transform:uppercase;margin-bottom:clamp(30px,5vw,54px)}
+.hero h1{font:400 clamp(40px,6.4vw,78px)/.95 "Anton",sans-serif;letter-spacing:.01em;text-transform:uppercase;margin-bottom:20px}
+.hero .intro{max-width:52ch;margin:0 auto clamp(28px,4vw,44px);font-size:clamp(17px,1.8vw,20px);line-height:1.5;color:var(--soft);text-wrap:balance}
+.hero .kicker{margin-bottom:24px}
 .phones{display:flex;justify-content:center;gap:clamp(14px,3vw,40px);flex-wrap:wrap}
 .phone{cursor:pointer;width:clamp(150px,17vw,210px);text-align:center;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
 .phone:hover,.phone:focus-visible{transform:translateY(-10px)}
@@ -112,6 +114,8 @@ section[id]{scroll-margin-top:90px}
 
 <section class="hero" id="work">
   <h1>This could be<br>your website</h1>
+  <p class="intro">We design, build and look after websites for small businesses all over Ireland, for €100 a month. You own your domain and content from day one.</p>
+  <h2 class="kicker">Example websites: tap one to look around</h2>
   <div class="phones" id="phones">
   <div role="button" tabindex="0" class="phone" data-i="0" aria-label="Open the Corner Cup example website">
     <div class="frame"><div class="screen"><iframe src="mock/corner-cup.html" tabindex="-1" aria-hidden="true" loading="lazy" scrolling="no" title="The Corner Cup example website"></iframe></div></div>
@@ -134,8 +138,8 @@ section[id]{scroll-margin-top:90px}
 
 <section class="wrap strip">
   <div>
-    <h2>€100 a month.</h2>
-    <p>We build it. We keep it up to date. You own it.</p>
+    <h2>One price: €100 a month</h2>
+    <p>12-month minimum. Small changes included.</p>
   </div>
   <div class="btns">
     <a class="cta ghost" href="/services">See what's included</a>

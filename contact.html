@@ -32,7 +32,7 @@
 .email:hover{color:var(--gold)}
 .btns{display:flex;flex-wrap:wrap;gap:12px}
 .copied{font:500 12px/1 "DM Mono",monospace;letter-spacing:.1em;color:var(--gold);margin-top:14px;min-height:12px}
-.mailbox ul{margin-top:28px}
+.mailbox .list{margin:28px 0 16px}
 .steps{list-style:none;display:grid;gap:22px;counter-reset:s}
 .steps li{display:grid;grid-template-columns:42px 1fr;gap:14px;counter-increment:s}
 .steps li::before{content:counter(s);display:grid;place-items:center;width:42px;height:42px;border-radius:50%;border:1px solid var(--gold);font:500 15px/1 "DM Mono",monospace;color:var(--gold)}
@@ -60,18 +60,19 @@
   <div class="wrap page-head">
     <div class="kicker">Twenty minutes. No jargon.</div>
     <h1>Contact us</h1>
-    <p>Book a free call. Tell us a little about your business and we'll get back to you within one working day.</p>
+    <p>Email hello@newpathdigital.ie to book a free 20-minute call. We'll reply within one working day.</p>
   </div>
 
   <section class="wrap contact">
     <div class="mailbox">
-      <div class="kicker">Email us</div>
+      <h2 class="kicker">Email us</h2>
       <a class="email" href="mailto:hello@newpathdigital.ie?subject=Free%20call">hello@newpathdigital.ie</a>
       <div class="btns">
         <a class="cta" href="mailto:hello@newpathdigital.ie?subject=Free%20call">Book a free call</a>
         <button class="cta ghost" id="copy" type="button">Copy email</button>
       </div>
       <div class="copied" id="copied" aria-live="polite"></div>
+      <h2 class="kicker list">What to put in your email</h2>
       <ul class="ticks">
         <li>Your name and business name</li>
         <li>What kind of business it is</li>
@@ -88,7 +89,7 @@
         <li><div><b>We have a quick chat</b><span>We look at what you have now and tell you plainly what we'd do. No pressure to sign up.</span></div></li>
       </ol>
       <div class="prose" style="margin-top:34px">
-        <div class="kicker">Where we work</div>
+        <h2 class="kicker">Where we work</h2>
         <p>All of Ireland. We work by phone, email and video call.</p>
       </div>
     </div>
