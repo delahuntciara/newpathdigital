@@ -26,7 +26,7 @@ nav .links{display:flex;gap:26px}
 .hero .txt{position:absolute;z-index:1;left:clamp(24px,6vw,80px);bottom:clamp(40px,10vh,90px);color:#fbf1e4;max-width:440px}
 .hero h1{font:500 clamp(18px,2.4vw,26px)/1.45 "DM Mono",monospace;margin-bottom:22px}
 .btn{display:inline-block;background:var(--rust);color:#fff;padding:11px 20px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;border-radius:2px}
-.btn.ghost{background:none;border:1px solid currentColor}
+.btn.ghost{background:none;color:var(--brown);border:1px solid currentColor}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,6vw,90px);align-items:center;padding:clamp(60px,9vw,120px) 0}
 .split .ph{aspect-ratio:4/3.3;border-radius:2px;overflow:hidden}
 .eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-bottom:10px}
@@ -35,13 +35,13 @@ p{color:#5b4334;max-width:46ch}
 p+.btn{margin-top:24px}
 .note{font:500 26px/1.1 "Caveat",cursive;color:var(--rust);transform:rotate(-6deg);display:inline-block;margin-bottom:18px}
 .roast{background:var(--paper);padding:clamp(60px,9vw,110px) 0}
-.roast .split{padding:0}
-.bag{position:relative;aspect-ratio:3/4;max-width:300px;margin:0 auto;background:linear-gradient(160deg,#6d4b33,#3d2617);border-radius:10px 10px 6px 6px;box-shadow:0 30px 50px -20px rgba(60,30,10,.5)}
+.roast .split{padding-block:0;padding-inline:28px}
+.bag{position:relative;aspect-ratio:3/4;width:100%;max-width:300px;margin:0 auto;background:linear-gradient(160deg,#6d4b33,#3d2617);border-radius:10px 10px 6px 6px;box-shadow:0 30px 50px -20px rgba(60,30,10,.5)}
 .bag::before{content:"";position:absolute;left:0;right:0;top:0;height:28px;background:repeating-linear-gradient(90deg,#4c3020 0 6px,#5a3a27 6px 12px);border-radius:10px 10px 0 0}
 .bag .label{position:absolute;left:50%;top:50%;transform:translate(-50%,-40%);width:58%;aspect-ratio:1;background:#fbf6ee;border-radius:50%;display:grid;place-content:center;text-align:center;color:var(--brown)}
 .bag .label b{font:800 17px/1 "Syne";letter-spacing:.12em}
 .bag .label small{font-size:9px;letter-spacing:.14em;margin-top:6px}
-.menu{padding:clamp(60px,9vw,110px) 0}
+.menu{padding-block:clamp(60px,9vw,110px)}
 .menu h2{text-align:center;margin-bottom:36px}
 .menu ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 60px;max-width:820px;margin:0 auto}
 .menu li{display:flex;gap:10px;padding:12px 0;border-bottom:1px dashed #cdbba6}
@@ -56,7 +56,7 @@ p+.btn{margin-top:24px}
 footer{padding:26px 28px;display:flex;justify-content:space-between;font-size:11px;color:var(--dim);letter-spacing:.06em}
 @media (max-width:720px){
   body{overflow-x:hidden}
-  .wrap{padding:0 20px}
+  .wrap{padding-inline:20px}
   nav{justify-content:center;padding:16px 20px}
   nav .links{display:none}
   .logo{font-size:18px;letter-spacing:.1em}
@@ -68,7 +68,9 @@ footer{padding:26px 28px;display:flex;justify-content:space-between;font-size:11
   .hero .txt{left:20px;right:20px;bottom:36px}
   .hero h1{font-size:17px;margin-bottom:18px}
   .hero::after{background:linear-gradient(0deg,rgba(40,22,10,.82),rgba(40,22,10,.1) 70%)}
+  .roast .split{padding-inline:20px}
   .bag{max-width:230px}
+  .bag .label{width:70%}
   footer{flex-direction:column;gap:6px;text-align:center}
 }
 /* inside the phone frames: no desktop scrollbar taking up the screen */
