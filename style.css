@@ -9,9 +9,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 /* ---------- header ---------- */
 .bar{position:sticky;top:0;z-index:20;background:var(--green);border-bottom:1px solid #0b140e;display:flex;align-items:center;gap:clamp(14px,1.6vw,26px);padding:10px clamp(16px,3vw,36px)}
-.mark{width:clamp(56px,4.6vw,96px);height:clamp(56px,4.6vw,96px);flex:none;display:block}
+.mark{width:clamp(72px,7vw,122px);height:clamp(72px,7vw,122px);flex:none;display:block}
 .brand{display:flex;align-items:center;gap:14px;flex:none}
-.brand .name{font:700 clamp(26px,2.3vw,46px)/1 "JetBrains Mono","DM Mono",monospace;letter-spacing:0;color:#fff;text-transform:uppercase;white-space:nowrap}
+.brand .name{font:700 clamp(32px,3.4vw,60px)/1 "JetBrains Mono","DM Mono",monospace;letter-spacing:0;color:#fff;text-transform:uppercase;white-space:nowrap}
 .nav{display:flex;gap:clamp(8px,.7vw,14px);margin-left:auto;flex-wrap:wrap;justify-content:center}
 .nav a{font:400 clamp(11px,.88vw,14px)/1 "JetBrains Mono","DM Mono",monospace;color:#fff;text-transform:uppercase;border:1px solid #0b140e;border-radius:999px;padding:clamp(9px,.75vw,12px) clamp(9px,.85vw,14px);white-space:nowrap;transition:background .2s,color .2s}
 .nav a:hover,.nav a[aria-current="page"]{background:var(--cream);color:var(--green)}
@@ -49,16 +49,18 @@ footer.site a:hover{color:var(--cream)}
 footer.site .note{width:100%;font-size:12px;color:rgba(244,239,228,.45)}
 
 /* wide screens: logo and name in the centre, menu right */
-@media (min-width:1271px){.bar{min-height:clamp(92px,6.6vw,118px)}.brand{position:absolute;left:50%;transform:translateX(-50%)}}
-@media (max-width:1270px){
+/* the menu goes in two rows until there is room for one */
+@media (min-width:1061px) and (max-width:1899px){.nav{display:grid;grid-template-columns:auto auto}.nav a{text-align:center}}
+@media (min-width:1061px){.bar{min-height:clamp(100px,8.4vw,144px)}.brand{position:absolute;left:50%;transform:translateX(-50%)}}
+@media (max-width:1060px){
   .nav a{font-size:12px}
   .bar{flex-wrap:wrap;justify-content:center;gap:10px}
   .nav{width:100%;margin:0}
 }
 @media (max-width:760px){
-  .brand{gap:10px}
-  .mark{width:42px;height:42px}
-  .brand .name{font-size:clamp(18px,6vw,26px)}
+  .brand{gap:8px}
+  .mark{width:54px;height:54px}
+  .brand .name{font-size:clamp(19px,7.2vw,32px)}
   .nav a{padding:10px 8px;font-size:12px;text-align:center}
   .cols,.cols.four{grid-template-columns:1fr}
   footer.site{flex-direction:column}
