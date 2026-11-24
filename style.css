@@ -9,11 +9,12 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 /* ---------- header ---------- */
 .bar{position:sticky;top:0;z-index:20;background:var(--green);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:24px;padding:10px clamp(16px,3vw,36px)}
-.mark{width:46px;height:46px;flex:none;display:block}
-.nav{display:flex;gap:clamp(8px,2vw,22px);margin:0 auto;flex-wrap:wrap;justify-content:center}
-.nav a{font:500 12px/1 "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,239,228,.55);border-radius:999px;padding:10px clamp(14px,2.2vw,30px);transition:background .2s,color .2s}
+.mark{width:56px;height:56px;flex:none;display:block}
+.brand{display:flex;align-items:center;gap:16px;flex:none}
+.brand .name{font:700 clamp(26px,2.9vw,38px)/1 "JetBrains Mono","DM Mono",monospace;letter-spacing:0;color:#fff;text-transform:uppercase;white-space:nowrap}
+.nav{display:flex;gap:clamp(8px,1.2vw,18px);margin-left:auto;flex-wrap:wrap;justify-content:center}
+.nav a{font:500 12px/1 "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,239,228,.55);border-radius:999px;padding:11px clamp(12px,1.4vw,24px);white-space:nowrap;transition:background .2s,color .2s}
 .nav a:hover,.nav a[aria-current="page"]{background:var(--cream);color:var(--green)}
-.bar .spacer{width:46px;flex:none}
 
 /* ---------- shared blocks ---------- */
 .wrap{max-width:1180px;margin:0 auto;padding-left:clamp(20px,5vw,60px);padding-right:clamp(20px,5vw,60px)}
@@ -47,12 +48,17 @@ footer.site nav{display:flex;flex-wrap:wrap;gap:8px 22px}
 footer.site a:hover{color:var(--cream)}
 footer.site .note{width:100%;font-size:12px;color:rgba(244,239,228,.45)}
 
-@media (max-width:760px){
+@media (max-width:1120px){
   .bar{flex-wrap:wrap;justify-content:center;gap:10px}
-  .bar .spacer{display:none}
-  .nav{width:100%}
-  .nav a{padding:9px 12px;font-size:10px}
+  .nav{width:100%;margin:0}
+}
+@media (max-width:760px){
+  .brand{gap:10px}
+  .mark{width:42px;height:42px}
+  .brand .name{font-size:clamp(18px,6vw,26px)}
+  .nav a{padding:9px 12px;font-size:10px;text-align:center}
   .cols,.cols.four{grid-template-columns:1fr}
   footer.site{flex-direction:column}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media (max-width:480px){.nav{display:grid;grid-template-columns:1fr 1fr}}
