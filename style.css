@@ -1,5 +1,5 @@
 /* Shared look for every New Path Digital page */
-:root{--green:#1d3b29;--green2:#16301f;--gold:#c9a24a;--cream:#f4efe4;--ink:#18201a;--soft:rgba(244,239,228,.82);--line:rgba(201,162,74,.25)}
+:root{--green:#1f3d2b;--green2:#16301f;--gold:#c9a24a;--cream:#f4efe4;--ink:#18201a;--soft:rgba(244,239,228,.82);--line:rgba(201,162,74,.25)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--green);color:var(--cream);font:400 16px/1.6 "Inter Tight",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -8,12 +8,12 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
 /* ---------- header ---------- */
-.bar{position:sticky;top:0;z-index:20;background:var(--green);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:24px;padding:10px clamp(16px,3vw,36px)}
-.mark{width:56px;height:56px;flex:none;display:block}
+.bar{position:sticky;top:0;z-index:20;background:var(--green);border-bottom:1px solid #0b140e;display:flex;align-items:center;gap:clamp(14px,1.6vw,26px);padding:10px clamp(16px,3vw,36px)}
+.mark{width:clamp(56px,6vw,96px);height:clamp(56px,6vw,96px);flex:none;display:block}
 .brand{display:flex;align-items:center;gap:16px;flex:none}
-.brand .name{font:700 clamp(26px,2.9vw,38px)/1 "JetBrains Mono","DM Mono",monospace;letter-spacing:0;color:#fff;text-transform:uppercase;white-space:nowrap}
-.nav{display:flex;gap:clamp(8px,1.2vw,18px);margin-left:auto;flex-wrap:wrap;justify-content:center}
-.nav a{font:500 12px/1 "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(244,239,228,.55);border-radius:999px;padding:11px clamp(12px,1.4vw,24px);white-space:nowrap;transition:background .2s,color .2s}
+.brand .name{font:700 clamp(26px,3vw,50px)/1 "JetBrains Mono","DM Mono",monospace;letter-spacing:0;color:#fff;text-transform:uppercase;white-space:nowrap}
+.nav{display:flex;gap:clamp(8px,1.2vw,22px);margin:0 auto 0 0;flex-wrap:wrap;justify-content:center}
+.nav a{font:400 clamp(13px,1.3vw,21px)/1 "JetBrains Mono","DM Mono",monospace;color:#fff;text-transform:uppercase;border:1px solid #0b140e;border-radius:999px;padding:clamp(11px,1.15vw,18px) clamp(10px,1.2vw,26px);white-space:nowrap;transition:background .2s,color .2s}
 .nav a:hover,.nav a[aria-current="page"]{background:var(--cream);color:var(--green)}
 
 /* ---------- shared blocks ---------- */
@@ -56,7 +56,7 @@ footer.site .note{width:100%;font-size:12px;color:rgba(244,239,228,.45)}
   .brand{gap:10px}
   .mark{width:42px;height:42px}
   .brand .name{font-size:clamp(18px,6vw,26px)}
-  .nav a{padding:9px 12px;font-size:10px;text-align:center}
+  .nav a{padding:10px 8px;font-size:12px;text-align:center}
   .cols,.cols.four{grid-template-columns:1fr}
   footer.site{flex-direction:column}
 }
