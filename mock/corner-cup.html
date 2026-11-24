@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-IE">
 <head>
 <meta charset="utf-8">
+<meta name="robots" content="noindex, follow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Corner Cup · Kilkenny</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,15 +55,24 @@ p+.btn{margin-top:24px}
 .visit .btn{margin-top:22px;background:#f3ece0;color:var(--brown)}
 footer{padding:26px 28px;display:flex;justify-content:space-between;font-size:11px;color:var(--dim);letter-spacing:.06em}
 @media (max-width:720px){
+  body{overflow-x:hidden}
+  .wrap{padding:0 20px}
+  nav{justify-content:center;padding:16px 20px}
   nav .links{display:none}
-  nav{justify-content:center}
-  .logo{font-size:22px}
-  .split{grid-template-columns:1fr}
+  .logo{font-size:18px;letter-spacing:.1em}
+  .split{grid-template-columns:1fr;gap:28px;padding:56px 0}
   .menu ul{grid-template-columns:1fr}
-  .hero{height:560px}
-  .hero::after{background:linear-gradient(0deg,rgba(40,22,10,.8),rgba(40,22,10,.1) 70%)}
+  .menu li{gap:14px}
+  .hero{height:min(560px,78vh);min-height:400px}
+  .hero img{object-position:72% 55%}
+  .hero .txt{left:20px;right:20px;bottom:36px}
+  .hero h1{font-size:17px;margin-bottom:18px}
+  .hero::after{background:linear-gradient(0deg,rgba(40,22,10,.82),rgba(40,22,10,.1) 70%)}
+  .bag{max-width:230px}
   footer{flex-direction:column;gap:6px;text-align:center}
 }
+/* inside the phone frames: no desktop scrollbar taking up the screen */
+html{scrollbar-width:none}html::-webkit-scrollbar{display:none}
 </style>
 </head>
 <body>

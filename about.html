@@ -1,11 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-IE">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About us | New Path Digital</title>
-<meta name="description" content="A small Irish team that builds and looks after websites for small Irish businesses.">
+<meta name="description" content="Meet New Path Digital: a small Irish web design team of five that builds and looks after websites for small businesses all over Ireland.">
 <link rel="icon" href="/icon.svg">
+<link rel="canonical" href="https://newpathdigital-one.vercel.app/about">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_IE">
+<meta property="og:site_name" content="New Path Digital">
+<meta property="og:url" content="https://newpathdigital-one.vercel.app/about">
+<meta property="og:title" content="About us | New Path Digital">
+<meta property="og:description" content="Meet New Path Digital: a small Irish web design team of five that builds and looks after websites for small businesses all over Ireland.">
+<meta property="og:image" content="https://newpathdigital-one.vercel.app/street/coffee.jpg">
+<meta property="og:image:width" content="1800">
+<meta property="og:image:height" content="1350">
+<meta property="og:image:alt" content="A barista pours milk into a coffee at the counter of a small café, with scones and a street outside the window">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About us | New Path Digital">
+<meta name="twitter:description" content="Meet New Path Digital: a small Irish web design team of five that builds and looks after websites for small businesses all over Ireland.">
+<meta name="twitter:image" content="https://newpathdigital-one.vercel.app/street/coffee.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,6 +28,13 @@
 <style>
 .story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,6vw,80px);align-items:start}
 .story .lead{font-size:clamp(22px,2.6vw,30px);line-height:1.35}
+
+.cols.team{grid-template-columns:repeat(5,1fr);gap:clamp(14px,2vw,28px)}
+@media (max-width:1000px) and (min-width:761px){.cols.team{grid-template-columns:repeat(3,1fr)}}
+.team .person img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:14px;margin-bottom:18px}
+.col h3.nm{font:400 clamp(20px,1.9vw,26px)/1 "Anton",sans-serif;letter-spacing:.01em;color:var(--cream);margin-bottom:6px}
+.team .rl{font:500 12px/1.3 "DM Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+@media (max-width:760px){.cols.team{grid-template-columns:1fr 1fr;gap:28px 16px}}
 @media (max-width:760px){.story{grid-template-columns:1fr}}
 </style>
 </head>
@@ -35,7 +57,7 @@
   <div class="wrap page-head">
     <div class="kicker">Who we are</div>
     <h1>About us</h1>
-    <p>We're a small Irish team that builds and looks after websites for small Irish businesses.</p>
+    <p>We're a small Irish web design team that builds and looks after websites for small businesses all over Ireland.</p>
   </div>
 
   <section class="wrap section">
@@ -60,6 +82,18 @@
       <div class="col"><h3>Plain words</h3><p>No jargon, no surprise bills. If something costs extra, we tell you first.</p></div>
     </div>
   </section>
+
+  <section class="wrap section" id="team">
+    <div class="kicker">Real people you can ring</div>
+    <h2 class="big">Meet the team</h2>
+    <div class="cols team">
+      <div class="col person"><img src="/team/lorcan-foley.jpg" alt="Lorcan Foley, Client Lead at New Path Digital" width="600" height="600" loading="lazy"><h3 class="nm">Lorcan Foley</h3><div class="rl">Client Lead</div><p>Your first call and your main contact. I'll make sure we understand your business before we build a thing.</p></div>
+      <div class="col person"><img src="/team/ciara-delahunt.jpg" alt="Ciara Delahunt, Web Designer at New Path Digital" width="600" height="600" loading="lazy"><h3 class="nm">Ciara Delahunt</h3><div class="rl">Web Designer</div><p>I design and build your site so it looks like you and works on any phone.</p></div>
+      <div class="col person"><img src="/team/elizabeth-carty.jpg" alt="Elizabeth Carty, Content &amp; Changes at New Path Digital" width="600" height="600" loading="lazy"><h3 class="nm">Elizabeth Carty</h3><div class="rl">Content &amp; Changes</div><p>I write the words on your site and make your changes, within 2 working days of you sending them.</p></div>
+      <div class="col person"><img src="/team/charlotte-cranfield.jpg" alt="Charlotte Cranfield, Launch &amp; Support at New Path Digital" width="600" height="600" loading="lazy"><h3 class="nm">Charlotte Cranfield</h3><div class="rl">Launch &amp; Support</div><p>I get your site live and keep it safe: your domain in your name, hosting, security and backups. If anything goes wrong, I fix it.</p></div>
+      <div class="col person"><img src="/team/nicole-griffin.jpg" alt="Nicole Griffin, Marketing Insights at New Path Digital" width="600" height="600" loading="lazy"><h3 class="nm">Nicole Griffin</h3><div class="rl">Marketing Insights</div><p>I get you found on Google and send you a plain report every month on what's working.</p></div>
+    </div>
+  </section>
 </main>
 
 <section class="call">
@@ -70,7 +104,7 @@
 
 <footer class="site">
   <span>New Path Digital. Websites for small Irish businesses.</span>
-  <nav><a href="/#work">Our work</a><a href="/services">Service &amp; pricing</a><a href="/about">About us</a><a href="/contact">Contact us</a></nav>
+  <nav><a href="/#work">Our work</a><a href="/services">Service &amp; pricing</a><a href="/about">About us</a><a href="/contact">Contact us</a><a href="/privacy">Privacy &amp; cookies</a></nav>
 </footer>
 </body>
 </html>
